@@ -30,8 +30,8 @@ If you just need to run Metatrader for running your MQL5 programs without any Py
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/gmag11/MetaTrader5-Docker-Image
-cd MetaTrader5-Docker-Image
+git clone https://github.com/thanhlongzzz/MetaTrader5-Docker
+cd MetaTrader5-Docker
 ```
 
 2. Build the Docker image:
@@ -43,7 +43,9 @@ docker build -t mt5 .
 3. Run the Docker image:
 
 ```bash
-docker run -d -p 3000:3000 -p 8001:8001 -v config:/config mt5
+docker compose up -d
+# check log
+# docker logs -f mt5
 ```
 
 Now you can access MetaTrader5 via a web browser at localhost:3000.
