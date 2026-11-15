@@ -99,7 +99,7 @@ fi
 # Install mt5linux library in Windows if not installed
 show_message "[6/7] Checking and installing mt5linux library in Windows if necessary"
 if ! is_wine_python_package_installed "mt5linux"; then
-    $wine_executable python -m pip install --no-cache-dir "mt5linux>=0.1.9"
+    $wine_executable python -m pip install --no-cache-dir "mt5linux-=1.0.2"
 fi
 
 # Install python-dateutil if needed (datetime is built-in, but dateutil adds features)
@@ -111,7 +111,7 @@ fi
 # Install mt5linux library in Linux if not installed
 show_message "[6/7] Checking and installing mt5linux library in Linux if necessary"
 if ! is_python_package_installed "mt5linux"; then
-    pip install --break-system-packages --no-cache-dir --no-deps mt5linux && \
+    pip install --break-system-packages --no-cache-dir --no-deps "mt5linux-=1.0.2" && \
     pip install --break-system-packages --no-cache-dir rpyc plumbum numpy
 fi
 
