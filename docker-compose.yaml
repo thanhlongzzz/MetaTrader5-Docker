@@ -2,6 +2,7 @@ services:
   mt5:
     build: .
     image: mt5:latest
+    restart: always
     container_name: mt5
     volumes:
       - ./config:/config
